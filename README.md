@@ -77,6 +77,8 @@ Your Glue job needs permission to read from and write to S3.
 6.  Set the **Name** to `process_reviews_job`.
 7.  Select the `AWSGlueServiceRole-Reviews` **IAM Role** you created in the previous step.
 8.  Save the job.
+<img width="1919" height="928" alt="image" src="https://github.com/user-attachments/assets/c8088f49-672c-4278-98ba-22ad3f3887ca" />
+
 
 > **Note:** The script is already configured to use the `handsonfinallanding` and `handsonfinalprocessed` buckets.
 
@@ -89,9 +91,13 @@ This function will start the Glue job when a file is uploaded.
 4.  Set the **Runtime** to **Python 3.10** (or any modern Python runtime).
 5.  **Permissions:** Under "Change default execution role," select **Create a new role with basic Lambda permissions**. This role will be automatically named.
 6.  Create the function.
+   <img width="1919" height="917" alt="image" src="https://github.com/user-attachments/assets/890593c2-0503-46ce-acc5-1eb4db742dee" />
+
 
 #### 5a. Add Lambda Code
 Paste the contents of `src/lambda_function.py` into the code editor. Make sure the `GLUE_JOB_NAME` variable matches the name of your Glue job (`process_reviews_job`).
+<img width="1919" height="987" alt="image" src="https://github.com/user-attachments/assets/7b265bb6-f01b-4968-a21e-c00ad7811af1" />
+
 
 #### 5b. Add Lambda Permissions
 The new Lambda role needs permission to start a Glue job.
@@ -111,6 +117,8 @@ The new Lambda role needs permission to start a Glue job.
     }
     ```
 4.  Name the policy `Allow-Glue-StartJobRun` and save it.
+<img width="1916" height="983" alt="image" src="https://github.com/user-attachments/assets/607c0836-5e82-46a8-b31a-6ee92839bf1e" />
+
 
 #### 5c. Add the S3 Trigger
 1.  Go back to your Lambda function's main page.
@@ -119,6 +127,7 @@ The new Lambda role needs permission to start a Glue job.
 4.  Select your `handsonfinallanding` bucket.
 5.  Set the **Event type** to `s3:ObjectCreated:*` (or "All object create events").
 6.  Acknowledge the recursive invocation warning and click **Add**.
+<img width="1915" height="935" alt="image" src="https://github.com/user-attachments/assets/954591f7-007f-4327-9d27-1c83a09332da" />
 
 ---
 
