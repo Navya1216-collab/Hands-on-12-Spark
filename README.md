@@ -141,6 +141,11 @@ Your pipeline is now fully deployed and automated!
 4.  You can monitor the job's progress in the **AWS Glue** console under the **Monitoring** tab.
 
 ---
+<img width="1917" height="937" alt="image" src="https://github.com/user-attachments/assets/b9637152-4dcd-417b-be65-92d2cc3a5440" />
+<img width="1911" height="947" alt="image" src="https://github.com/user-attachments/assets/1e7627b7-4541-4ce8-9521-d225752a2cdf" />
+
+
+
 
 ## 📈 Query Results
 
@@ -151,6 +156,8 @@ After the job (which may take 2-3 minutes to run), navigate to your `handsonfina
 * `s3://handsonfinalprocessed/Athena Results/rating_distribution/`
 
 You will also find the complete, cleaned dataset in `s3://handsonfinalprocessed/processed-data/`.
+<img width="1911" height="947" alt="image" src="https://github.com/user-attachments/assets/0439ca8e-5b70-483f-8945-555ad428c9c3" />
+
 
 ---
 ## 🧹 Cleanup
