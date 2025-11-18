@@ -51,6 +51,10 @@ Follow these steps to deploy the pipeline in your own AWS account.
 Create two S3 buckets with globally unique names:
 * `handsonfinallanding`: This is where you will upload your raw data.
 * `handsonfinalprocessed`: This is where the processed data and query results will be stored.
+* <img width="1899" height="935" alt="image" src="https://github.com/user-attachments/assets/20d30d4b-eee8-41ec-8db9-45bed80d3d58" />
+<img width="1919" height="946" alt="image" src="https://github.com/user-attachments/assets/8ae6a462-2ec0-4a68-b530-da7552555d2f" />
+
+
 
 ### 3. Create IAM Role for AWS Glue
 Your Glue job needs permission to read from and write to S3.
@@ -61,6 +65,8 @@ Your Glue job needs permission to read from and write to S3.
 4.  Attach the `AWSGlueServiceRole` managed policy.
 5.  Attach the `AmazonS3FullAccess` policy (for this demo) or a more restrictive policy that only grants access to your two buckets.
 6.  Name the role `AWSGlueServiceRole-Reviews` and create it.
+   <img width="1916" height="920" alt="image" src="https://github.com/user-attachments/assets/57766085-4871-472b-9739-49dbc08dcd9a" />
+
 
 ### 4. Create the AWS Glue ETL Job
 1.  Go to the **AWS Glue** service.
